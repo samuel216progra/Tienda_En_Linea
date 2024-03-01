@@ -1,28 +1,9 @@
-// Importar Express
-const express = require('express');
-// Importar Mongoose
-const mongoose = require('mongoose');
-// Importar configuración de la base de datos
-const dbConfig = require('./config/dbConfig');
+import { config } from "dotenv";
 
-// Crear una instancia de Express
-const app = express();
+config();
+import Server from "./configs/server.js";
 
-// Configuración de Express para usar JSON como middleware
-app.use(express.json());
+const server = new Server();
 
-// Configurar conexión a la base de datos MongoDB
-dbConfig();
 
-// Ruta de prueba
-app.get('/', (req, res) => {
-    res.send('¡Servidor funcionando!');
-});
-
-// Puerto en el que se ejecutará el servidor
-const PORT = process.env.PORT || 3000;
-
-// Iniciar el servidor Express
-app.listen(PORT, () => {
-    console.log(`Servidor corriendo en el puerto ${PORT}`);
-});
+server.listen();
