@@ -1,23 +1,32 @@
 {
-  "name": "tienda_en_linea",
+  "name": "tienda_online",
   "version": "1.0.0",
-  "description": "Este proyecto se centra en el desarrollo de una API web implementada en NodeJS, destinada a gestionar el registro de ventas, productos en línea y otras operaciones comerciales de una empresa. La aplicación se estructura en dos secciones principales, administrador y cliente, cada uno con funcionalidades específicas",
-  "main": "index.js",
+  "description": "Tienda En Linea - Samuel Rodriguez ",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon app"
+    "start": "node app.js",
+    "dev": "nodemon app.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "ESModule"
+  ],
+  "author": "samuel Rodriguez",
+  "license": "MIT",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
-    "dotenv": "^16.4.4",
+    "dotenv": "^16.4.5",
     "express": "^4.18.2",
+    "express-validator": "^7.0.1",
     "helmet": "^7.1.0",
     "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.1.3",
+    "mongoose": "^8.2.0",
     "morgan": "^1.10.0"
-  }
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  },
+  "type": "module"
 }
+
