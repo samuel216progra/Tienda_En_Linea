@@ -1,28 +1,29 @@
-'use strict'
+'use strict';
 
-import express from 'express'
-import cors from 'cors'
-import helmet from 'helmet'
-import morgan from 'morgan'
+import express from 'express';
+import cors from 'cors';
+import helmet from 'helmet';
+import morgan from 'morgan';
 import { dbConnection } from './mongo.js';
 import userRoutes from '../src/client/user.routes.js';
 import authRoutes from '../src/auth/auth.routes.js';
-import publicationRoutes from '../src/publication/publication.routes.js';
-import commentRoutes from '../src/comment/comment.routes.js';
+import productRoutes from '../src/product/product.routes.js'; 
+import categoryRoutes from '../src/category/category.routes.js'; 
 
 class Server {
     constructor() {
         this.app = express();
-        this.port = process.env.PORT;
-        this.usuarioPath = '/gestorDeOpiniones/v1/users';
-        this.authPath = '/gestorDeOpiniones/v1/auth';
-        this.publicationPath = '/gestorDeOpiniones/v1/publication';
-        this.commentPath = '/gestorDeOpiniones/v1/comment';
+        this.port = process.env.PORT || 3000;
+        this.usuarioPath = '/tiendaOnline/v1/users';
+        this.authPath = '/tiendaOnline/v1/auth';
+        this.productPath = '/tiendaOnline/v1/products'; 
+        this.categoryPath = '/tiendaOnline/v1/categories'; 
 
         this.middlewares();
         this.conectarDB();
         this.routes();
     }
+
     async conectarDB() {
         await dbConnection();
     }
@@ -36,15 +37,18 @@ class Server {
     }
 
     routes() {
+        // Implementar las rutas de los usuarios y autenticación
         this.app.use(this.usuarioPath, userRoutes);
         this.app.use(this.authPath, authRoutes);
-        this.app.use(this.publicationPath, publicationRoutes);
-        this.app.use(this.commentPath, commentRoutes)
+
+        // Implementar las rutas de productos y categorías
+        this.app.use(this.productPath, productRoutes);
+        this.app.use(this.categoryPath, categoryRoutes);
     }
 
     listen() {
         this.app.listen(this.port, () => {
-            console.log('Server running on port ', this.port);
+            console.log(`Server running on port ${this.port}`);
         });
     }
 }
