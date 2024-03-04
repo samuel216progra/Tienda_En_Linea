@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "userCollection",
-    "dateExported": "2024-03-12T02:23:56.413Z",
+    "dateExported": "2024-03-12T15:03:01.063Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -14,12 +14,12 @@
             "method": "POST",
             "sortNum": 10000,
             "created": "2024-03-11T07:31:43.039Z",
-            "modified": "2024-03-12T01:50:59.509Z",
+            "modified": "2024-03-12T14:00:42.788Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"name\" : \"Braulio\",\n  \"userName\" : \"1212\",\n  \"lastName\" : \"echeverria\",\n  \"email\" : \"112V@12\",\n  \"role\":\"ROLE_ADMIN\",\n  \"password\" : \"123456\"\n}",
+                "raw": "{\n  \"name\" : \"Braulio\",\n  \"userName\" : \"1212\",\n  \"lastName\" : \"echeverria\",\n  \"email\" : \"adgfd@12\",\n  \"role\":\"ROLE_ADMIN\",\n  \"password\" : \"123456\"\n}",
                 "form": []
             },
             "reqType": "post",
@@ -30,18 +30,52 @@
             "colId": "aa82c1a1-1448-4744-8cc1-4cc2bb8ee69a",
             "containerId": "",
             "name": "UpdateUser",
-            "url": "http://localhost:3000/tiendaOnline/v1/users/65e1ded300c1675a570333b0",
+            "url": "http://localhost:3000/tiendaOnline/v1/users/65f05b2a93276405bb9edef6",
             "method": "PUT",
             "sortNum": 30000,
             "created": "2024-03-11T07:31:43.040Z",
-            "modified": "2024-03-11T07:31:43.040Z",
-            "headers": [],
+            "modified": "2024-03-12T14:27:29.829Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWYwNWIyYTkzMjc2NDA1YmI5ZWRlZjYiLCJpYXQiOjE3MTAyNTMyNDIsImV4cCI6MTcxMDI1Njg0Mn0.BRYA2v7rI9694Xr5kZZ_QfDG5DwXabYzlO9VSvT12ck"
+                }
+            ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"oldPassword\": \"147258\",\n  \"name\": \"Samuel Adolfo\",\n  \"userName\": \"srodriguez\",\n  \"lastName\": \"Rodriguez Castro\",\n  \"password\": \"1458666\"\n}",
+                "raw": "{\n  \"name\" : \"Braulio\",\n  \"userName\" : \"1212\",\n  \"lastName\" : \"sandavallL\",\n  \"email\" : \"ad@12\",\n  \"role\":\"ROLE_ADMIN\",\n  \"password\" : \"123456\"\n}",
                 "form": []
             },
+            "reqType": "put",
+            "tests": []
+        },
+        {
+            "_id": "c63128d8-29a9-47b5-9db0-2e0c47e8bfc9",
+            "colId": "aa82c1a1-1448-4744-8cc1-4cc2bb8ee69a",
+            "containerId": "",
+            "name": "GET verUsuarios",
+            "url": "http://localhost:3000/tiendaOnline/v1/users",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-03-12T13:32:09.152Z",
+            "modified": "2024-03-12T13:41:14.356Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "25333eb7-1de2-4004-b282-86a2e4d46eae",
+            "colId": "aa82c1a1-1448-4744-8cc1-4cc2bb8ee69a",
+            "containerId": "",
+            "name": "DELET e3liminar usuario",
+            "url": "http://localhost:3000/tiendaOnline/v1/users/65eface01dbaad2e2476c741",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2024-03-12T14:26:12.295Z",
+            "modified": "2024-03-12T14:55:31.417Z",
+            "headers": [],
+            "params": [],
             "tests": []
         }
     ]

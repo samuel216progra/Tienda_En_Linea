@@ -1,24 +1,31 @@
-// Importar la función de verificación de JWT
 import { validarJWT } from '../middlewares/validar-jwt.js';
 import Product from './product.model.js';
+import Category from '../category/category.model.js';
+
 
 export const createProduct = async (req, res) => {
-  
     if (req.user.role !== 'ROLE_ADMIN') {
         return res.status(403).json({ msg: 'Access forbidden. Only admin users allowed.' });
     }
 
-    const { name, description, price, cost, category, stock } = req.body;
+    const { name, description, price, cost, category, stock, sale } = req.body;
 
     try {
         let categoryId = category; 
         if (!categoryId) {
             categoryId = '12345678910';
         }
+
+        // Buscar la categoría por su nombre
+        const categoryObj = await Category.findOne({ name: category });
+
+        if (!categoryObj) {
+            return res.status(400).json({ msg: 'Category not found' });
+        }
         
-        const product = new Product({ name, description, price, cost, category: categoryId, stock });
+        const product = new Product({ name, description, price, cost, category: categoryObj.name, stock, sale });
         await product.save();
-        res.status(201).json({ product });
+        res.status(201).json({ product: product.toObject() }); // Agregar el método toObject() para incluir todos los campos del documento en la respuesta
     } catch (error) {
         console.error(error);
         res.status(500).json({ msg: "Error creating product" });
@@ -82,3 +89,14 @@ export const deleteProduct = async (req, res) => {
     }
 };
 
+
+
+export const getProductsOutOfStock = async (req, res) => {
+    try {
+        const products = await Product.find({ stock: 0 });
+        res.status(200).json({ products });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ msg: "Error getting products out of stock" });
+    }
+};

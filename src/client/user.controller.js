@@ -2,15 +2,13 @@ import { response, request } from "express";
 import bcryptjs from 'bcryptjs';
 import User from './user.model.js';
 
-export const getUsers = async (req = request, res = response) => {
 
-}
 
 export const createUser = async (req, res) => {
-    const { name, userName, lastName, email, password, role } = req.body; // Extract role from request
+    const { name, userName, lastName, email, password, role } = req.body; 
 
     try {
-        const user = new User({ name, userName, lastName, email, password, role }); // Include role when creating new user
+        const user = new User({ name, userName, lastName, email, password, role }); 
 
         const salt = bcryptjs.genSaltSync();
         user.password = bcryptjs.hashSync(password, salt);
@@ -27,6 +25,17 @@ export const createUser = async (req, res) => {
         });
     }
 }
+
+export const getUsers = async (req, res) => {
+    try {
+        const users = await User.find();
+        res.status(200).json({ users });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ msg: "Error fetching users" });
+    }
+};
+
 
 export const updateUser = async (req, res = response) => {
     const { id } = req.params;
@@ -74,3 +83,26 @@ export const updateUser = async (req, res = response) => {
         });
     }
 }
+
+// Endpoint para eliminar un usuario
+export const deleteUser = async (req, res) => {
+    const { id } = req.params;
+
+    try {
+        const user = await User.findById(id);
+
+        if (!user) {
+            return res.status(404).json({ msg: "User not found" });
+        }
+
+
+        await User.findByIdAndDelete(id);
+        res.status(200).json({ msg: "User deleted successfully" });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ msg: "Error deleting user" });
+    }
+};
+
+
+

@@ -3,7 +3,8 @@ import { check } from "express-validator";
 import {
     createUser,
     getUsers,
-    updateUser
+    updateUser,
+    deleteUser // Agregamos el controlador para eliminar usuario
 } from "./user.controller.js";
 import {
     existeUserById,
@@ -41,6 +42,17 @@ router.put(
         validarCampos,
     ],
     updateUser
+);
+
+// Agregamos la ruta para eliminar usuario
+router.delete(
+    "/:id",
+    [
+        check("id", "No es un Id válido").isMongoId(),
+        check("id").custom(existeUserById),
+        validarCampos,
+    ],
+    deleteUser
 );
 
 export default router;

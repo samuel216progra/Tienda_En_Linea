@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "Products",
-    "dateExported": "2024-03-12T02:24:03.349Z",
+    "dateExported": "2024-03-12T15:03:06.991Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -14,17 +14,17 @@
             "method": "POST",
             "sortNum": 10000,
             "created": "2024-03-11T08:17:51.550Z",
-            "modified": "2024-03-12T01:50:07.892Z",
+            "modified": "2024-03-12T14:57:43.172Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWVmYWNlMDFkYmFhZDJlMjQ3NmM3NDEiLCJpYXQiOjE3MTAyMDczMjksImV4cCI6MTcxMDIxMDkyOX0.decM_dRkUX8Hv1My8PdsFpuw4Aw2SUg1ZGJ5tfw7SKI"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWYwNWIyYTkzMjc2NDA1YmI5ZWRlZjYiLCJpYXQiOjE3MTAyNTUzMDUsImV4cCI6MTcxMDI1ODkwNX0.T0Lm0NADduEK8Co-ksRkKJ81ZsxMnIee6X9T9wu_NUs"
                 }
             ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n    \"name\": \"Laptop\",\n    \"description\": \"Powerful laptop with high performance\",\n    \"price\": 1200,\n    \"cost\": 1000,\n    \"stock\":12,\n    \"category\": \"65ef8c97ea9beddd4a12eeca\"\n}",
+                "raw": "{\n    \"name\": \"dfswdaeffgdafgsdfsadfa\",\n    \"description\": \"Powersdfsadfasdfful laptop with high performance\",\n    \"price\": 1200,\n    \"cost\": 1000,\n    \"stock\":0,\n    \"sale\":\"ALTA\",\n    \"category\": \"PP\"\n}",
                 "form": []
             },
             "reqType": "post",
@@ -39,8 +39,13 @@
             "method": "GET",
             "sortNum": 20000,
             "created": "2024-03-12T00:06:49.103Z",
-            "modified": "2024-03-12T00:07:04.347Z",
-            "headers": [],
+            "modified": "2024-03-12T14:57:56.280Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWYwNWIyYTkzMjc2NDA1YmI5ZWRlZjYiLCJpYXQiOjE3MTAyNTUzMDUsImV4cCI6MTcxMDI1ODkwNX0.T0Lm0NADduEK8Co-ksRkKJ81ZsxMnIee6X9T9wu_NUs"
+                }
+            ],
             "params": [],
             "tests": []
         },
@@ -49,16 +54,21 @@
             "colId": "5e4f8d6a-d676-419a-9f06-04c7b4f3bebe",
             "containerId": "",
             "name": "PUT editarProduct",
-            "url": "http://localhost:3000/tiendaOnline/v1/products/65ef7d4e394595967421be5e",
+            "url": "http://localhost:3000/tiendaOnline/v1/products/65f06d673122383275294874",
             "method": "PUT",
             "sortNum": 40000,
             "created": "2024-03-12T00:08:37.182Z",
-            "modified": "2024-03-12T00:11:02.283Z",
-            "headers": [],
+            "modified": "2024-03-12T14:59:40.367Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWYwNWIyYTkzMjc2NDA1YmI5ZWRlZjYiLCJpYXQiOjE3MTAyNTUzMDUsImV4cCI6MTcxMDI1ODkwNX0.T0Lm0NADduEK8Co-ksRkKJ81ZsxMnIee6X9T9wu_NUs"
+                }
+            ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\r\n    \"name\": \"Nuevo nombre del producto\",\r\n    \"description\": \"Nueva descripción del producto\",\r\n    \"price\": 99.99,\r\n    \"cost\": 59.99,\r\n    \"stock\": 6,\r\n    \"category\": \"65ef8c97ea9beddd4a12eeca\"\r\n}",
+                "raw": "\n{\n    \"name\": \"dfswdaeffgdafgsdfsadfa\",\n    \"description\": \"Powersdfsadfasdfful laptop with high performance\",\n    \"price\": 1200,\n    \"cost\": 1000,\n    \"stock\":0,\n    \"sale\":\"ALTA\",\n    \"category\": \"PP\"\n}",
                 "form": []
             },
             "tests": []
@@ -68,12 +78,36 @@
             "colId": "5e4f8d6a-d676-419a-9f06-04c7b4f3bebe",
             "containerId": "",
             "name": "DELETE eliminarProduct",
-            "url": "http://localhost:3000/tiendaOnline/v1/products/65ef7d4e394595967421be5e",
+            "url": "http://localhost:3000/tiendaOnline/v1/products/65ef7d5c394595967421be61",
             "method": "DELETE",
             "sortNum": 50000,
             "created": "2024-03-12T00:13:54.125Z",
-            "modified": "2024-03-12T00:15:03.802Z",
-            "headers": [],
+            "modified": "2024-03-12T15:00:29.937Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWYwNWIyYTkzMjc2NDA1YmI5ZWRlZjYiLCJpYXQiOjE3MTAyNTUzMDUsImV4cCI6MTcxMDI1ODkwNX0.T0Lm0NADduEK8Co-ksRkKJ81ZsxMnIee6X9T9wu_NUs"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "c671005e-ff37-42d2-8736-a376fc06ae91",
+            "colId": "5e4f8d6a-d676-419a-9f06-04c7b4f3bebe",
+            "containerId": "",
+            "name": "GET prodictoAgotado",
+            "url": "http://localhost:3000/tiendaOnline/v1/products/out-of-stock",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2024-03-12T03:42:31.523Z",
+            "modified": "2024-03-12T15:01:03.625Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWYwNWIyYTkzMjc2NDA1YmI5ZWRlZjYiLCJpYXQiOjE3MTAyNTUzMDUsImV4cCI6MTcxMDI1ODkwNX0.T0Lm0NADduEK8Co-ksRkKJ81ZsxMnIee6X9T9wu_NUs"
+                }
+            ],
             "params": [],
             "tests": []
         }

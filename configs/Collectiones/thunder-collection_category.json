@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "category",
-    "dateExported": "2024-03-12T02:24:09.421Z",
+    "dateExported": "2024-03-12T15:03:12.975Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -14,17 +14,17 @@
             "method": "POST",
             "sortNum": 10000,
             "created": "2024-03-11T21:41:13.371Z",
-            "modified": "2024-03-12T01:51:52.914Z",
+            "modified": "2024-03-12T14:03:25.561Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWVmYjUwM2FjZmMxMzI3OTVlMDZlM2UiLCJpYXQiOjE3MTAyMDgyNzEsImV4cCI6MTcxMDIxMTg3MX0.6mEwqguz1zEdDfP9PKOuwTXdBcu5EbxCLuFTeLaHwnQ"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWYwNWIyYTkzMjc2NDA1YmI5ZWRlZjYiLCJpYXQiOjE3MTAyNTIxNzMsImV4cCI6MTcxMDI1NTc3M30.5GxSG1-9cDQ-lTdvHbl4qZVxm1vuumZHCyC6QLGd1e4"
                 }
             ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n    \"name\": \"ElectrasdfDSsdóndfsaicos\",\n    \"description\": \"DisposASDdsfitivos electrónicos y gadgets\"\n}",
+                "raw": "{\n    \"name\": \"PP\",\n    \"description\": \"DisposASDdsfitivos electrónicos y gadgets\"\n}",
                 "form": []
             },
             "reqType": "post",
@@ -39,8 +39,13 @@
             "method": "GET",
             "sortNum": 20000,
             "created": "2024-03-11T23:00:42.180Z",
-            "modified": "2024-03-11T23:01:34.662Z",
-            "headers": [],
+            "modified": "2024-03-12T14:56:22.457Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWYwNWIyYTkzMjc2NDA1YmI5ZWRlZjYiLCJpYXQiOjE3MTAyNTUzMDUsImV4cCI6MTcxMDI1ODkwNX0.T0Lm0NADduEK8Co-ksRkKJ81ZsxMnIee6X9T9wu_NUs"
+                }
+            ],
             "params": [],
             "tests": []
         },
@@ -53,12 +58,17 @@
             "method": "PUT",
             "sortNum": 30000,
             "created": "2024-03-11T23:02:34.854Z",
-            "modified": "2024-03-11T23:04:18.525Z",
-            "headers": [],
+            "modified": "2024-03-12T14:56:38.045Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWYwNWIyYTkzMjc2NDA1YmI5ZWRlZjYiLCJpYXQiOjE3MTAyNTUzMDUsImV4cCI6MTcxMDI1ODkwNX0.T0Lm0NADduEK8Co-ksRkKJ81ZsxMnIee6X9T9wu_NUs"
+                }
+            ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\r\n    \"name\": \"Electrónicos Actualizados\",\r\n    \"description\": \"Dispositivos electrónicos y gadgets actualizados\"\r\n}",
+                "raw": "{\n    \"name\": \"Elecdfgsdftrónicos Actualizados\",\n    \"description\": \"Dispositivos electrónicos y gadgets actualizados\"\n}",
                 "form": []
             },
             "tests": []
@@ -68,12 +78,17 @@
             "colId": "4dc65f40-6a08-4268-9a66-cfce50cc82ac",
             "containerId": "",
             "name": "DELETE eliminarCCategoria",
-            "url": "http://localhost:3000/tiendaOnline/v1/categories/65ef8c9bea9beddd4a12eecc",
+            "url": "http://localhost:3000/tiendaOnline/v1/categories/65ef8c97ea9beddd4a12eeca",
             "method": "DELETE",
             "sortNum": 40000,
             "created": "2024-03-11T23:05:07.909Z",
-            "modified": "2024-03-11T23:05:43.245Z",
-            "headers": [],
+            "modified": "2024-03-12T14:57:13.265Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWYwNWIyYTkzMjc2NDA1YmI5ZWRlZjYiLCJpYXQiOjE3MTAyNTUzMDUsImV4cCI6MTcxMDI1ODkwNX0.T0Lm0NADduEK8Co-ksRkKJ81ZsxMnIee6X9T9wu_NUs"
+                }
+            ],
             "params": [],
             "tests": []
         }
