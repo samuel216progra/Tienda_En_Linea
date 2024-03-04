@@ -1,7 +1,7 @@
-
 import { Router } from "express";
 import { check } from "express-validator";
 import { validarCampos } from "../middlewares/validar-campos.js";
+import { validarJWT } from "../middlewares/validar-jwt.js"; // Importar el middleware de validación de JWT
 import {
     createCategory,
     getCategories,
@@ -11,6 +11,10 @@ import {
 } from "./category.controller.js";
 
 const router = Router();
+
+// Middleware de validación de JWT para todas las rutas
+router.use(validarJWT);
+
 
 router.post(
     "/",

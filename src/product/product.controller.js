@@ -1,13 +1,18 @@
+// Importar la función de verificación de JWT
+import { validarJWT } from '../middlewares/validar-jwt.js';
 import Product from './product.model.js';
 
 export const createProduct = async (req, res) => {
+  
+    if (req.user.role !== 'ROLE_ADMIN') {
+        return res.status(403).json({ msg: 'Access forbidden. Only admin users allowed.' });
+    }
+
     const { name, description, price, cost, category, stock } = req.body;
 
     try {
-        let categoryId = category; // El ID de la categoría proporcionado en la solicitud
-        // Si no se proporciona un ID de categoría, asigna el ID de la categoría predeterminada "several"
+        let categoryId = category; 
         if (!categoryId) {
-            
             categoryId = '12345678910';
         }
         
@@ -20,9 +25,8 @@ export const createProduct = async (req, res) => {
     }
 };
 
-
 export const getProducts = async (req, res) => {
-    // Implementación de la función para obtener todos los productos
+
     try {
         const products = await Product.find();
         res.status(200).json({ products });
@@ -33,7 +37,7 @@ export const getProducts = async (req, res) => {
 };
 
 export const getProductById = async (req, res) => {
-    // Implementación de la función para obtener un producto por su ID
+   
     const { id } = req.params;
 
     try {
@@ -49,7 +53,7 @@ export const getProductById = async (req, res) => {
 };
 
 export const updateProductById = async (req, res) => {
-    // Implementación de la función para actualizar un producto por su ID
+   
     const { id } = req.params;
     const { name, description, price, cost, category, stock } = req.body;
 
@@ -63,7 +67,7 @@ export const updateProductById = async (req, res) => {
 };
 
 export const deleteProduct = async (req, res) => {
-    // Implementación de la función para eliminar un producto
+   
     const { id } = req.params;
 
     try {
@@ -78,10 +82,3 @@ export const deleteProduct = async (req, res) => {
     }
 };
 
-export default {
-    createProduct,
-    getProducts,
-    getProductById,
-    updateProductById,
-    deleteProduct
-};

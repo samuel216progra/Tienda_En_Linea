@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "category",
-    "dateExported": "2024-03-11T23:05:52.344Z",
+    "dateExported": "2024-03-12T02:24:09.421Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -14,12 +14,17 @@
             "method": "POST",
             "sortNum": 10000,
             "created": "2024-03-11T21:41:13.371Z",
-            "modified": "2024-03-11T22:58:35.905Z",
-            "headers": [],
+            "modified": "2024-03-12T01:51:52.914Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWVmYjUwM2FjZmMxMzI3OTVlMDZlM2UiLCJpYXQiOjE3MTAyMDgyNzEsImV4cCI6MTcxMDIxMTg3MX0.6mEwqguz1zEdDfP9PKOuwTXdBcu5EbxCLuFTeLaHwnQ"
+                }
+            ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n    \"name\": \"Electrasdfsdónicos\",\n    \"description\": \"Dispositivos electrónicos y gadgets\"\n}",
+                "raw": "{\n    \"name\": \"ElectrasdfDSsdóndfsaicos\",\n    \"description\": \"DisposASDdsfitivos electrónicos y gadgets\"\n}",
                 "form": []
             },
             "reqType": "post",

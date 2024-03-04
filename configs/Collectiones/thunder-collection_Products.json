@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "Products",
-    "dateExported": "2024-03-12T00:26:05.265Z",
+    "dateExported": "2024-03-12T02:24:03.349Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -14,8 +14,13 @@
             "method": "POST",
             "sortNum": 10000,
             "created": "2024-03-11T08:17:51.550Z",
-            "modified": "2024-03-12T00:04:37.043Z",
-            "headers": [],
+            "modified": "2024-03-12T01:50:07.892Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWVmYWNlMDFkYmFhZDJlMjQ3NmM3NDEiLCJpYXQiOjE3MTAyMDczMjksImV4cCI6MTcxMDIxMDkyOX0.decM_dRkUX8Hv1My8PdsFpuw4Aw2SUg1ZGJ5tfw7SKI"
+                }
+            ],
             "params": [],
             "body": {
                 "type": "json",

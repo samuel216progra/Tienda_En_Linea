@@ -1,5 +1,5 @@
 import jwt from 'jsonwebtoken';
-import User from '../user/user.model.js';
+import User from '../client/user.model.js';
 
 export const validarJWT = async (req, res, next) => {
     const token = req.header("x-token");
@@ -18,15 +18,23 @@ export const validarJWT = async (req, res, next) => {
         if (!user) {
             return res.status(401).json({
                 msg: 'User does not exist in the database'
-            })
+            });
         }
 
         if (!user.state) {
             return res.status(401).json({
-                msg: 'Invalid token - user with status: false '
+                msg: 'Invalid token - user with status: false'
             });
         }
 
+       
+        if (user.role !== 'ROLE_ADMIN') {
+            return res.status(403).json({
+                msg: 'Access forbidden. Only admin users allowed.'
+            });
+        }
+
+        
         req.user = user;
 
         next();
@@ -37,3 +45,5 @@ export const validarJWT = async (req, res, next) => {
         });
     }
 }
+
+export default validarJWT;

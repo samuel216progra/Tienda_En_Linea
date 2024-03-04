@@ -1,7 +1,13 @@
-
+// Importar la función de verificación de JWT
+import { validarJWT } from '../middlewares/validar-jwt.js';
 import Category from './category.model.js';
 
 export const createCategory = async (req, res) => {
+    // Verificar si el usuario tiene el rol adecuado
+    if (req.user.role !== 'ROLE_ADMIN') {
+        return res.status(403).json({ msg: 'Access forbidden. Only admin users allowed.' });
+    }
+
     const { name, description } = req.body;
 
     try {
@@ -69,3 +75,4 @@ export const deleteCategory = async (req, res) => {
         res.status(500).json({ msg: "Error deleting category" });
     }
 };
+
