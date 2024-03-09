@@ -1,0 +1,333 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "ADMIN",
+    "dateExported": "2024-03-14T15:41:31.169Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "a6c7f3b9-2231-4789-95a7-051d43169243",
+            "name": "Category",
+            "containerId": "",
+            "created": "2024-03-14T14:09:48.165Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "7d66bbb9-aa8d-4776-b728-372929a606a0",
+            "name": "Product",
+            "containerId": "",
+            "created": "2024-03-14T14:09:48.167Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "247406ac-d2d5-4a99-97be-51f9d834df1a",
+            "name": "User",
+            "containerId": "",
+            "created": "2024-03-14T14:09:48.168Z",
+            "sortNum": 30000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "33614d68-13ee-45fc-ac89-8e73fc62019f",
+            "colId": "dd0f2d91-1a6b-468a-8dfe-a940b4f344ee",
+            "containerId": "247406ac-d2d5-4a99-97be-51f9d834df1a",
+            "name": "DELET e3liminar usuario",
+            "url": "http://localhost:3000/tiendaOnline/v1/users/65f3198d08bf8a731e2afe07",
+            "method": "DELETE",
+            "sortNum": 2500,
+            "created": "2024-03-14T14:09:48.182Z",
+            "modified": "2024-03-14T15:37:06.971Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\r\n    \"confirm\": \"nou\"\r\n}\r\n",
+                "form": []
+            },
+            "reqType": "del",
+            "tests": []
+        },
+        {
+            "_id": "980b5631-7de1-4fcf-871b-281fb32088e2",
+            "colId": "dd0f2d91-1a6b-468a-8dfe-a940b4f344ee",
+            "containerId": "247406ac-d2d5-4a99-97be-51f9d834df1a",
+            "name": "GET verUsuarios",
+            "url": "http://localhost:3000/tiendaOnline/v1/users",
+            "method": "GET",
+            "sortNum": 5000,
+            "created": "2024-03-14T14:09:48.181Z",
+            "modified": "2024-03-14T14:09:48.181Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "1a046aa4-9986-4098-a374-b2d886e8df03",
+            "colId": "dd0f2d91-1a6b-468a-8dfe-a940b4f344ee",
+            "containerId": "a6c7f3b9-2231-4789-95a7-051d43169243",
+            "name": "POST category",
+            "url": "http://localhost:3000/tiendaOnline/v1/categories",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-03-14T14:09:48.166Z",
+            "modified": "2024-03-14T14:58:36.327Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWYzMDVjOWIzMTRhZTMzMzA5OGVhZmMiLCJpYXQiOjE3MTA0MjgyOTgsImV4cCI6MTcxMDQzMTg5OH0.4LdKGG092ZF3u0WjdJ_VMUt7WzccjByAEv5Se5BIXgY"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"name\": \"eli\",\n    \"description\": \"variedad de productos\"\n}",
+                "form": []
+            },
+            "reqType": "post",
+            "tests": []
+        },
+        {
+            "_id": "532377d0-dfd2-4d61-b7e0-af114c20f08f",
+            "colId": "dd0f2d91-1a6b-468a-8dfe-a940b4f344ee",
+            "containerId": "7d66bbb9-aa8d-4776-b728-372929a606a0",
+            "name": "POST product",
+            "url": "http://localhost:3000/tiendaOnline/v1/products",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-03-14T14:09:48.171Z",
+            "modified": "2024-03-14T15:38:55.708Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWYzMDVjOWIzMTRhZTMzMzA5OGVhZmMiLCJpYXQiOjE3MTA0MjgyOTgsImV4cCI6MTcxMDQzMTg5OH0.4LdKGG092ZF3u0WjdJ_VMUt7WzccjByAEv5Se5BIXgY"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"name\": \"carros\",\n    \"description\": \"de plastico con baterias tipo C\",\n    \"price\": 1200,\n    \"cost\": 1000,\n    \"stock\":10,\n    \"sale\":\"ALTA\",\n    \"category\": \"\"\n}",
+                "form": []
+            },
+            "reqType": "post",
+            "tests": []
+        },
+        {
+            "_id": "4b6a39bd-b91a-4521-81c9-63d1560660a7",
+            "colId": "dd0f2d91-1a6b-468a-8dfe-a940b4f344ee",
+            "containerId": "247406ac-d2d5-4a99-97be-51f9d834df1a",
+            "name": "CreateUser",
+            "url": "http://localhost:3000/tiendaOnline/v1/users/",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-03-14T14:09:48.178Z",
+            "modified": "2024-03-14T15:36:46.386Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\" : \"Braulio\",\n  \"userName\" : \"1212\",\n  \"lastName\" : \"echeverria\",\n  \"email\" : \"creear@12\",\n  \"role\":\"ROLE_ADMIN\",\n  \"password\" : \"123456\"\n}",
+                "form": []
+            },
+            "reqType": "post",
+            "tests": []
+        },
+        {
+            "_id": "ab9703b5-3ccc-40c9-9b96-e7af479870ff",
+            "colId": "dd0f2d91-1a6b-468a-8dfe-a940b4f344ee",
+            "containerId": "a6c7f3b9-2231-4789-95a7-051d43169243",
+            "name": "GET verCategories",
+            "url": "http://localhost:3000/tiendaOnline/v1/categories",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-03-14T14:09:48.167Z",
+            "modified": "2024-03-14T14:09:48.167Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": ""
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "f24ddcdc-c807-42ac-9f45-235d27c33120",
+            "colId": "dd0f2d91-1a6b-468a-8dfe-a940b4f344ee",
+            "containerId": "7d66bbb9-aa8d-4776-b728-372929a606a0",
+            "name": "Get verProducts",
+            "url": "http://localhost:3000/tiendaOnline/v1/products",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-03-14T14:09:48.172Z",
+            "modified": "2024-03-14T14:16:50.336Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWYzMDVjOWIzMTRhZTMzMzA5OGVhZmMiLCJpYXQiOjE3MTA0MjU1NjAsImV4cCI6MTcxMDQyOTE2MH0.K23aNfKdb4SMF62MVjFB-NNAdmhOIKf892VO9nzcAJM"
+                }
+            ],
+            "params": [],
+            "reqType": "get",
+            "tests": []
+        },
+        {
+            "_id": "b2fc8c29-d061-4ac9-8a85-0ac6f4856424",
+            "colId": "dd0f2d91-1a6b-468a-8dfe-a940b4f344ee",
+            "containerId": "247406ac-d2d5-4a99-97be-51f9d834df1a",
+            "name": "UpdateUser",
+            "url": "http://localhost:3000/tiendaOnline/v1/users/65f30876b314ae333098eb32",
+            "method": "PUT",
+            "sortNum": 20000,
+            "created": "2024-03-14T14:09:48.180Z",
+            "modified": "2024-03-14T14:24:33.757Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWYwNWIyYTkzMjc2NDA1YmI5ZWRlZjYiLCJpYXQiOjE3MTAyNTMyNDIsImV4cCI6MTcxMDI1Njg0Mn0.BRYA2v7rI9694Xr5kZZ_QfDG5DwXabYzlO9VSvT12ck"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\" : \"Braulio\",\n  \"userName\" : \"1212\",\n  \"lastName\" : \"sandavallL\",\n  \"email\" : \"crearmodificado@12\",\n  \"role\":\"ROLE_ADMIN\",\n  \"password\" : \"123456\"\n}",
+                "form": []
+            },
+            "reqType": "put",
+            "tests": []
+        },
+        {
+            "_id": "bb563f3f-6b54-4c4d-ba0f-031dd2adc256",
+            "colId": "dd0f2d91-1a6b-468a-8dfe-a940b4f344ee",
+            "containerId": "a6c7f3b9-2231-4789-95a7-051d43169243",
+            "name": "PUT editarCategoria",
+            "url": "http://localhost:3000/tiendaOnline/v1/categories/65f30600b314ae333098eb01",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2024-03-14T14:09:48.168Z",
+            "modified": "2024-03-14T14:14:50.969Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWYzMDVjOWIzMTRhZTMzMzA5OGVhZmMiLCJpYXQiOjE3MTA0MjU1NjAsImV4cCI6MTcxMDQyOTE2MH0.K23aNfKdb4SMF62MVjFB-NNAdmhOIKf892VO9nzcAJM"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"name\": \"Electonicos\",\n    \"description\": \"Dispositivos electrónicoss\"\n}",
+                "form": []
+            },
+            "reqType": "put",
+            "tests": []
+        },
+        {
+            "_id": "06f9bc70-f287-439c-add8-3b8dc06ec4f4",
+            "colId": "dd0f2d91-1a6b-468a-8dfe-a940b4f344ee",
+            "containerId": "7d66bbb9-aa8d-4776-b728-372929a606a0",
+            "name": "PUT editarProduct",
+            "url": "http://localhost:3000/tiendaOnline/v1/products/65f306bfb314ae333098eb15",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2024-03-14T14:09:48.173Z",
+            "modified": "2024-03-14T14:18:43.460Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWYzMDVjOWIzMTRhZTMzMzA5OGVhZmMiLCJpYXQiOjE3MTA0MjU1NjAsImV4cCI6MTcxMDQyOTE2MH0.K23aNfKdb4SMF62MVjFB-NNAdmhOIKf892VO9nzcAJM"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "\n{\n    \"name\": \"Pelota\",\n    \"description\": \"marca adidas, mundial 2014\",\n    \"price\": 1200,\n    \"cost\": 1000,\n    \"stock\":0,\n    \"sale\":\"ALTA\",\n    \"category\": \"juguete\"\n}",
+                "form": []
+            },
+            "reqType": "put",
+            "tests": []
+        },
+        {
+            "_id": "1f729c74-8b4a-45ce-bbb4-ce7c81baa190",
+            "colId": "dd0f2d91-1a6b-468a-8dfe-a940b4f344ee",
+            "containerId": "a6c7f3b9-2231-4789-95a7-051d43169243",
+            "name": "DELETE eliminarCCategoria",
+            "url": "http://localhost:3000/tiendaOnline/v1/categories/65f3109cd057a89ecc4f0821",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2024-03-14T14:09:48.169Z",
+            "modified": "2024-03-14T15:00:50.200Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWYzMDVjOWIzMTRhZTMzMzA5OGVhZmMiLCJpYXQiOjE3MTA0MjU1NjAsImV4cCI6MTcxMDQyOTE2MH0.K23aNfKdb4SMF62MVjFB-NNAdmhOIKf892VO9nzcAJM"
+                }
+            ],
+            "params": [],
+            "reqType": "del",
+            "tests": []
+        },
+        {
+            "_id": "6a649dea-c91e-4009-a7b0-cf1f7789e544",
+            "colId": "dd0f2d91-1a6b-468a-8dfe-a940b4f344ee",
+            "containerId": "7d66bbb9-aa8d-4776-b728-372929a606a0",
+            "name": "DELETE eliminarProduct",
+            "url": "http://localhost:3000/tiendaOnline/v1/products/65f306bfb314ae333098eb15",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2024-03-14T14:09:48.176Z",
+            "modified": "2024-03-14T14:23:26.622Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWYzMDVjOWIzMTRhZTMzMzA5OGVhZmMiLCJpYXQiOjE3MTA0MjU1NjAsImV4cCI6MTcxMDQyOTE2MH0.K23aNfKdb4SMF62MVjFB-NNAdmhOIKf892VO9nzcAJM"
+                }
+            ],
+            "params": [],
+            "reqType": "del",
+            "tests": []
+        },
+        {
+            "_id": "994611ca-8e02-420a-8d75-f841920942d2",
+            "colId": "dd0f2d91-1a6b-468a-8dfe-a940b4f344ee",
+            "containerId": "7d66bbb9-aa8d-4776-b728-372929a606a0",
+            "name": "GET prodictoAgotado",
+            "url": "http://localhost:3000/tiendaOnline/v1/products/out-of-stock",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2024-03-14T14:09:48.177Z",
+            "modified": "2024-03-14T14:09:48.177Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWYwNWIyYTkzMjc2NDA1YmI5ZWRlZjYiLCJpYXQiOjE3MTAyNTUzMDUsImV4cCI6MTcxMDI1ODkwNX0.T0Lm0NADduEK8Co-ksRkKJ81ZsxMnIee6X9T9wu_NUs"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "6101b20a-74ef-4855-b511-d788c0b6ace6",
+            "colId": "dd0f2d91-1a6b-468a-8dfe-a940b4f344ee",
+            "containerId": "7d66bbb9-aa8d-4776-b728-372929a606a0",
+            "name": "ADD Stock",
+            "url": "http://localhost:3000/tiendaOnline/v1/products/add-stock/65f28507baf6af8685ca50be",
+            "method": "POST",
+            "sortNum": 60000,
+            "created": "2024-03-14T14:09:48.183Z",
+            "modified": "2024-03-14T14:20:02.385Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWYzMDVjOWIzMTRhZTMzMzA5OGVhZmMiLCJpYXQiOjE3MTA0MjU1NjAsImV4cCI6MTcxMDQyOTE2MH0.K23aNfKdb4SMF62MVjFB-NNAdmhOIKf892VO9nzcAJM"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"productId\": \"65f306bfb314ae333098eb15\",\n    \"quantity\": 10\n}\n",
+                "form": []
+            },
+            "reqType": "post",
+            "tests": []
+        }
+    ]
+}

@@ -1,5 +1,3 @@
-// src/product/product.model.js
-
 import mongoose from 'mongoose';
 
 const ProductSchema = mongoose.Schema({
@@ -31,7 +29,7 @@ const ProductSchema = mongoose.Schema({
         default: 'MEDIA' 
     },
     category: {
-        type: String, // Cambiar de ObjectId a String
+        type: String, 
         ref: 'Category',
         required: [true, "The category is required"],
         default: 'several' 

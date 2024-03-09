@@ -1,5 +1,3 @@
-'use strict';
-
 import express from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
@@ -9,6 +7,8 @@ import userRoutes from '../src/client/user.routes.js';
 import authRoutes from '../src/auth/auth.routes.js';
 import productRoutes from '../src/product/product.routes.js'; 
 import categoryRoutes from '../src/category/category.routes.js'; 
+import cartRoutes from '../src/trolley/cart.routes.js';
+import invoiceRoutes from '../src/invoice/invoice.routes.js';
 
 class Server {
     constructor() {
@@ -18,6 +18,8 @@ class Server {
         this.authPath = '/tiendaOnline/v1/auth';
         this.productPath = '/tiendaOnline/v1/products'; 
         this.categoryPath = '/tiendaOnline/v1/categories'; 
+        this.cartPath = '/tiendaOnline/v1/cart'; 
+        this.invoicePath = '/tiendaOnline/v1/invoices';
 
         this.middlewares();
         this.conectarDB();
@@ -37,13 +39,12 @@ class Server {
     }
 
     routes() {
-        // Implementar las rutas de los usuarios y autenticación
         this.app.use(this.usuarioPath, userRoutes);
         this.app.use(this.authPath, authRoutes);
-
-        // Implementar las rutas de productos y categorías
         this.app.use(this.productPath, productRoutes);
         this.app.use(this.categoryPath, categoryRoutes);
+        this.app.use(this.cartPath, cartRoutes);
+        this.app.use(this.invoicePath, invoiceRoutes);
     }
 
     listen() {

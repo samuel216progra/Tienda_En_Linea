@@ -4,16 +4,17 @@ import {
     createUser,
     getUsers,
     updateUser,
-    deleteUser // Agregamos el controlador para eliminar usuario
+    deleteUser
 } from "./user.controller.js";
 import {
     existeUserById,
     existenteEmail
 } from "../helpers/db-validators.js"
 import { validarCampos } from "../middlewares/validar-campos.js"
-//import { validarJWT } from "../middlewares/validar-jwt";
+
 
 const router = Router();
+
 
 router.get("/", getUsers);
 
@@ -38,13 +39,13 @@ router.put(
     [
         check("id", "No es un Id válido").isMongoId(),
         check("id").custom(existeUserById),
-        check("role").optional().isIn(['ROLE_CLIENT', 'ROLE_ADMIN']), // Validate role if provided
+        check("role").optional().isIn(['ROLE_CLIENT', 'ROLE_ADMIN']), 
         validarCampos,
     ],
     updateUser
 );
 
-// Agregamos la ruta para eliminar usuario
+
 router.delete(
     "/:id",
     [
@@ -52,7 +53,8 @@ router.delete(
         check("id").custom(existeUserById),
         validarCampos,
     ],
-    deleteUser
+    deleteUser,
+    
 );
 
 export default router;

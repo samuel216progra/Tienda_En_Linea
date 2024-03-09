@@ -1,7 +1,7 @@
 import { Router } from "express";
 import { check } from "express-validator";
 import { validarCampos } from "../middlewares/validar-campos.js";
-import { validarJWT } from "../middlewares/validar-jwt.js"; // Importar el middleware de validación de JWT
+import { validarJWT } from "../middlewares/validar-jwt.js";
 import {
     createCategory,
     getCategories,
@@ -12,9 +12,14 @@ import {
 
 const router = Router();
 
-// Middleware de validación de JWT para todas las rutas
-router.use(validarJWT);
-
+// Middleware de validación de JWT para todas las rutas excepto para obtener todas las categorías
+router.use((req, res, next) => {
+    if (req.path === "/" && req.method === "GET") {
+        // Si la ruta es "/" y el método es "GET", continuar sin validar el token
+        return next();
+    }
+    validarJWT(req, res, next);
+});
 
 router.post(
     "/",

@@ -1,28 +1,27 @@
 {
     "client": "Thunder Client",
     "collectionName": "Login",
-    "dateExported": "2024-03-12T15:02:49.021Z",
+    "dateExported": "2024-03-14T15:41:49.049Z",
     "version": "1.1",
     "folders": [],
     "requests": [
         {
-            "_id": "3150c933-ac6d-47cd-8b1a-fae90dcaa0d7",
-            "colId": "5d72ca35-b26b-42c3-bcc6-2b2b73057f7d",
+            "_id": "e263dff5-5640-4ba1-993b-7fba15d50e94",
+            "colId": "32c1391a-6629-402b-86ab-a49bcc1da826",
             "containerId": "",
             "name": "loginUser",
             "url": "http://localhost:3000/tiendaOnline/v1/auth/login",
             "method": "POST",
             "sortNum": 20000,
-            "created": "2024-03-11T07:29:29.719Z",
-            "modified": "2024-03-12T13:40:03.578Z",
+            "created": "2024-03-14T14:09:48.633Z",
+            "modified": "2024-03-14T14:09:48.633Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"emailOrUser\" : \"ad@12\",\n  \"password\" : \"123456\"\n}",
+                "raw": "{\n  \"emailOrUser\" : \"braulio@12\",\n  \"password\" : \"123456\"\n}",
                 "form": []
             },
-            "reqType": "post",
             "tests": []
         }
     ]

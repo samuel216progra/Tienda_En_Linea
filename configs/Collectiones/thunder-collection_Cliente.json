@@ -1,0 +1,232 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Cliente",
+    "dateExported": "2024-03-14T15:41:38.670Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "d8e8d371-5703-494a-968b-4dcc3cda5ea8",
+            "name": "Gestion Productos",
+            "containerId": "",
+            "created": "2024-03-14T14:09:48.359Z",
+            "sortNum": 30000
+        },
+        {
+            "_id": "df985425-eb5d-432a-b912-35733f20d02e",
+            "name": "Carrito",
+            "containerId": "",
+            "created": "2024-03-14T14:09:48.360Z",
+            "sortNum": 40000
+        },
+        {
+            "_id": "124a7443-4383-47eb-aec9-5907555a3c8c",
+            "name": "Factura",
+            "containerId": "",
+            "created": "2024-03-14T14:09:48.361Z",
+            "sortNum": 50000
+        },
+        {
+            "_id": "4d4ea915-5fa2-4444-a681-fc13f212be36",
+            "name": "Manejo Mi Cuenta",
+            "containerId": "",
+            "created": "2024-03-14T14:09:48.362Z",
+            "sortNum": 60000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "7f9cc06a-01ca-4751-ad5a-9b512f0d10fe",
+            "colId": "02e91364-d98f-4e13-992e-19dabff48f9b",
+            "containerId": "d8e8d371-5703-494a-968b-4dcc3cda5ea8",
+            "name": "GET verCategories",
+            "url": "http://localhost:3000/tiendaOnline/v1/categories",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-03-14T14:09:48.359Z",
+            "modified": "2024-03-14T14:09:48.359Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": ""
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "6835994b-52f8-40fd-8e4b-5d5fb3d84e36",
+            "colId": "02e91364-d98f-4e13-992e-19dabff48f9b",
+            "containerId": "4d4ea915-5fa2-4444-a681-fc13f212be36",
+            "name": "UpdateUser",
+            "url": "http://localhost:3000/tiendaOnline/v1/users/65f05b2a93276405bb9edef6",
+            "method": "PUT",
+            "sortNum": 10000,
+            "created": "2024-03-14T14:09:48.371Z",
+            "modified": "2024-03-14T14:09:48.371Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWYwNWIyYTkzMjc2NDA1YmI5ZWRlZjYiLCJpYXQiOjE3MTAyNTMyNDIsImV4cCI6MTcxMDI1Njg0Mn0.BRYA2v7rI9694Xr5kZZ_QfDG5DwXabYzlO9VSvT12ck"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\" : \"Braulio\",\n  \"userName\" : \"1212\",\n  \"lastName\" : \"sandavallL\",\n  \"email\" : \"ad@12\",\n  \"role\":\"ROLE_ADMIN\",\n  \"password\" : \"123456\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "959f59a4-cc95-47fb-892c-3f06483fa9a9",
+            "colId": "02e91364-d98f-4e13-992e-19dabff48f9b",
+            "containerId": "d8e8d371-5703-494a-968b-4dcc3cda5ea8",
+            "name": "Producto Mas Vendido",
+            "url": "http://localhost:3000/tiendaOnline/v1/products/by-sale/ALTA",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-03-14T14:09:48.360Z",
+            "modified": "2024-03-14T14:09:48.360Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "6a245013-bd71-4b2b-aede-5b8e5fbf9c20",
+            "colId": "02e91364-d98f-4e13-992e-19dabff48f9b",
+            "containerId": "d8e8d371-5703-494a-968b-4dcc3cda5ea8",
+            "name": "Buscar Producto Nombre",
+            "url": "http://localhost:3000/tiendaOnline/v1/products/by-name?carros",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-03-14T14:09:48.361Z",
+            "modified": "2024-03-14T15:40:14.386Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWYzMDVjOWIzMTRhZTMzMzA5OGVhZmMiLCJpYXQiOjE3MTA0MjgyOTgsImV4cCI6MTcxMDQzMTg5OH0.4LdKGG092ZF3u0WjdJ_VMUt7WzccjByAEv5Se5BIXgY"
+                }
+            ],
+            "params": [
+                {
+                    "name": "carros",
+                    "value": "",
+                    "isPath": false
+                }
+            ],
+            "reqType": "get",
+            "tests": []
+        },
+        {
+            "_id": "467f486d-2244-4c45-b083-e7f9f1f049bb",
+            "colId": "02e91364-d98f-4e13-992e-19dabff48f9b",
+            "containerId": "4d4ea915-5fa2-4444-a681-fc13f212be36",
+            "name": "DELET eliminar mi cuenta",
+            "url": "http://localhost:3000/tiendaOnline/v1/users/65f3198d08bf8a731e2afe07",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2024-03-14T15:37:26.585Z",
+            "modified": "2024-03-14T15:38:04.722Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"confirm\": \"yes\"\n}\n",
+                "form": []
+            },
+            "reqType": "del",
+            "tests": []
+        },
+        {
+            "_id": "809002eb-edcb-4135-9b2a-2338b901a877",
+            "colId": "02e91364-d98f-4e13-992e-19dabff48f9b",
+            "containerId": "d8e8d371-5703-494a-968b-4dcc3cda5ea8",
+            "name": "Buscar Producto Categoria",
+            "url": "http://localhost:3000/tiendaOnline/v1/products/by-category?categoryName=juguetes",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2024-03-14T14:09:48.362Z",
+            "modified": "2024-03-14T14:29:08.394Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "categoryName",
+                    "value": "juguetes",
+                    "isPath": false
+                }
+            ],
+            "reqType": "get",
+            "tests": []
+        },
+        {
+            "_id": "b7a8600d-1f15-44b7-8a70-f0fb9cb7b0fd",
+            "colId": "02e91364-d98f-4e13-992e-19dabff48f9b",
+            "containerId": "df985425-eb5d-432a-b912-35733f20d02e",
+            "name": "Carrito",
+            "url": "http://localhost:3000/tiendaOnline/v1/cart/add-to-cart",
+            "method": "POST",
+            "sortNum": 60000,
+            "created": "2024-03-14T14:09:48.363Z",
+            "modified": "2024-03-14T14:30:02.851Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWYwNWIyYTkzMjc2NDA1YmI5ZWRlZjYiLCJpYXQiOjE3MTAzODAzNzcsImV4cCI6MTcxMDM4Mzk3N30.rfC2kq4feOzVx7RHmlSCfCZQoYJ1gi-ndlCq1j2MbJc"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"userId\": \"65f305c9b314ae333098eafc\",\n  \"productId\": \"65f3094f07f2f30db898bd34\",\n  \"quantity\": 5\n}",
+                "form": []
+            },
+            "reqType": "post",
+            "tests": []
+        },
+        {
+            "_id": "af4034dc-aaf3-43ed-b80c-100f007a3ae8",
+            "colId": "02e91364-d98f-4e13-992e-19dabff48f9b",
+            "containerId": "124a7443-4383-47eb-aec9-5907555a3c8c",
+            "name": "Crear Factura",
+            "url": "http://localhost:3000/tiendaOnline/v1/invoices/create-invoice",
+            "method": "POST",
+            "sortNum": 90000,
+            "created": "2024-03-14T14:09:48.369Z",
+            "modified": "2024-03-14T14:32:59.655Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWYzMDVjOWIzMTRhZTMzMzA5OGVhZmMiLCJpYXQiOjE3MTA0MjU1NjAsImV4cCI6MTcxMDQyOTE2MH0.K23aNfKdb4SMF62MVjFB-NNAdmhOIKf892VO9nzcAJM"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"userId\": \"65f305c9b314ae333098eafc\",\n  \"products\": [\n    {\n      \"productId\": \"65f3094f07f2f30db898bd34\",\n      \"quantity\": 2\n    },\n    {\n      \"productId\": \"65f3094f07f2f30db898bd34\",\n      \"quantity\": 3\n    }\n  ]\n}\n",
+                "form": []
+            },
+            "reqType": "post",
+            "tests": []
+        },
+        {
+            "_id": "00ed1c77-2c60-41d5-9bd4-ac5d78f0a2c9",
+            "colId": "02e91364-d98f-4e13-992e-19dabff48f9b",
+            "containerId": "124a7443-4383-47eb-aec9-5907555a3c8c",
+            "name": "Filtrar por usuario",
+            "url": "http://localhost:3000/tiendaOnline/v1/invoices/user-invoices",
+            "method": "GET",
+            "sortNum": 100000,
+            "created": "2024-03-14T14:09:48.370Z",
+            "modified": "2024-03-14T14:34:00.437Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWYzMDVjOWIzMTRhZTMzMzA5OGVhZmMiLCJpYXQiOjE3MTA0MjU1NjAsImV4cCI6MTcxMDQyOTE2MH0.K23aNfKdb4SMF62MVjFB-NNAdmhOIKf892VO9nzcAJM"
+                }
+            ],
+            "params": [],
+            "reqType": "get",
+            "tests": []
+        }
+    ]
+}

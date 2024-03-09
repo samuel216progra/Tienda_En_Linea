@@ -1,0 +1,28 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Create User",
+    "dateExported": "2024-03-14T15:41:44.029Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "36c360aa-54af-4d82-91f6-cacf6df0fcd3",
+            "colId": "53a4946f-4ff6-49f2-a873-1adbf5a4a2c9",
+            "containerId": "",
+            "name": "CreateUser",
+            "url": "http://localhost:3000/tiendaOnline/v1/users/",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-03-14T14:09:48.500Z",
+            "modified": "2024-03-14T14:09:48.500Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\" : \"Braulio\",\n  \"userName\" : \"becheverria\",\n  \"lastName\" : \"echeverria\",\n  \"email\" : \"braulio@12\",\n  \"role\":\"ROLE_ADMIN\",\n  \"password\" : \"123456\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}

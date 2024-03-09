@@ -1,9 +1,11 @@
 // Importar la función de verificación de JWT
 import { validarJWT } from '../middlewares/validar-jwt.js';
 import Category from './category.model.js';
+import Product from '../product/product.model.js';
+
 
 export const createCategory = async (req, res) => {
-    // Verificar si el usuario tiene el rol adecuado
+   
     if (req.user.role !== 'ROLE_ADMIN') {
         return res.status(403).json({ msg: 'Access forbidden. Only admin users allowed.' });
     }
@@ -29,6 +31,7 @@ export const getCategories = async (req, res) => {
         res.status(500).json({ msg: "Error fetching categories" });
     }
 };
+
 
 export const getCategoryById = async (req, res) => {
     const { id } = req.params;
@@ -61,6 +64,7 @@ export const updateCategory = async (req, res) => {
     }
 };
 
+
 export const deleteCategory = async (req, res) => {
     const { id } = req.params;
 
@@ -69,10 +73,17 @@ export const deleteCategory = async (req, res) => {
         if (!deletedCategory) {
             return res.status(404).json({ msg: "Category not found" });
         }
+
+        const defaultCategory = await Category.findOne({ name: "Category Default" }); 
+        if (!defaultCategory) {
+            return res.status(500).json({ msg: "Default category not found" });
+        }
+
+        await Product.updateMany({ category: deletedCategory._id }, { category: defaultCategory._id });
+
         res.json({ msg: "Category deleted successfully" });
     } catch (error) {
         console.error(error);
         res.status(500).json({ msg: "Error deleting category" });
     }
 };
-

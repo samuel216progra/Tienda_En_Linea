@@ -84,9 +84,10 @@ export const updateUser = async (req, res = response) => {
     }
 }
 
-// Endpoint para eliminar un usuario
+
 export const deleteUser = async (req, res) => {
     const { id } = req.params;
+    const { confirm } = req.body;
 
     try {
         const user = await User.findById(id);
@@ -95,6 +96,9 @@ export const deleteUser = async (req, res) => {
             return res.status(404).json({ msg: "User not found" });
         }
 
+        if (!confirm || confirm.toLowerCase() !== 'yes') {
+            return res.status(400).json({ msg: "Confirmation required to delete user. Please send 'confirm: yes' in the request body." });
+        }
 
         await User.findByIdAndDelete(id);
         res.status(200).json({ msg: "User deleted successfully" });
@@ -103,6 +107,4 @@ export const deleteUser = async (req, res) => {
         res.status(500).json({ msg: "Error deleting user" });
     }
 };
-
-
 
